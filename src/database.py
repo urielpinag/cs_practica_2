@@ -1,6 +1,6 @@
 """Módulo de acceso a datos para MiAgendaBot."""
 
-from models import Cita
+from .models import Cita
 
 
 def guardar_cita(cita: Cita) -> None:

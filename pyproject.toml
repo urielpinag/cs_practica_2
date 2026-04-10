@@ -1,0 +1,15 @@
+[tool.ruff]
+line-length = 79
+exclude = [".m_venv", "dist", "egg-info", "build"]
+include = ["src/**/*.py"]
+
+[tool.ruff.lint]
+select = ["E", "W", "D", "PL", "BLE", "F", "I", "S", "N", "ANN", "SIM", "ARG"]
+preview = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"    
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"

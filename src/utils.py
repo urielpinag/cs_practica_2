@@ -1,15 +1,13 @@
 """Módulo de utilidades para MiAgendaBot."""
 
-import os
-import json
-
 
 def formatear_fecha(fecha: str) -> str:
     """Formatea una fecha para presentación."""
     try:
         return f"Fecha: {fecha}"
-    except:
-        pass
+    except (ValueError, TypeError, AttributeError) as e:
+        print(f"Error al formatear fecha: {e}")
+        return fecha
 
 
 def conectar_api() -> str:

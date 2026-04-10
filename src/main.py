@@ -1,11 +1,12 @@
 """Punto de entrada principal para MiAgendaBot."""
 
 from datetime import datetime
-from models import Cliente, Cita
-from validators import validar_email
-from logic import verificar_disponibilidad
-from database import guardar_cita
-from notifications import enviar_confirmacion
+
+from .database import guardar_cita
+from .logic import verificar_disponibilidad
+from .models import Cita, Cliente
+from .notifications import enviar_confirmacion
+from .validators import validar_email
 
 
 def agendar_cita(
