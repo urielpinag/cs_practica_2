@@ -29,7 +29,7 @@ jobs:
 
       - name: Run Ruff and generate report
         run: ruff check src --output-format json --output-file ruff-report.json
-        continue-on-error: true # Evita que el pipeline se detenga por errores de estilo
+        continue-on-error: true 
 
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@master
